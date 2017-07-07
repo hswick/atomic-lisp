@@ -1,0 +1,16 @@
+{
+  "name": "atomic-lisp",
+  "version": "1.0.0",
+  "description": "Small lisp written in solidity",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ethereumjs-testrpc": "^4.0.1",
+    "solc": "^0.4.11",
+    "web3": "^0.19.1"
+  }
+}
