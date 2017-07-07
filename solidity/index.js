@@ -3,15 +3,15 @@ Web3 = require('web3');
 
 web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
 
-greeterABI = fs.readFileSync("greeter.sol:greeter.abi").toString();
-greeterBin = fs.readFileSync("greeter.sol:greeter.bin");
+atomicLispABI = fs.readFileSync("AtomicLisp.sol:atomiclisp.abi").toString();
+atomicLispBin = fs.readFileSync("AtomicLisp.sol:atomiclisp.bin");
 
-var Greeter = web3.eth.contract(JSON.parse(greeterABI));
+var AtomicLisp = web3.eth.contract(JSON.parse(atomicLispABI));
 
 function executeContract() {
 	var account = web3.eth.accounts[0];
-	var deployedContract = Greeter.new("Hello there!",
-	{data: greeterBin, from: account, gas: 3000000},
+	var deployedContract = AtomicLisp.new("(+ 2 2)",
+	{data: atomicLispBin, from: account, gas: 3000000},
 	function(e, contract) {
 		if (e) {
 			console.log(e);
@@ -21,8 +21,8 @@ function executeContract() {
 			}else{
 				console.log("Contract mined");
 				console.log(contract.address);
-				greeterInstance = Greeter.at(account);
-				console.log(greeterInstance.greet());
+				program = AtomicLisp.at(contract.address);
+				console.log(program.run());
 			}
 		}
 	});

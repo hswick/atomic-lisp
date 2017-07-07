@@ -18,6 +18,6 @@ Compile your solidity contracts:
 This will create abi and binary files for your contracts. You can load them up in your script for later use.
 
 Start testrpc in another window
-`./node_modules/.bin/testrpc
+`./node_modules/.bin/testrpc`
 
 Then you can run your script `node index.js`
