@@ -13,7 +13,7 @@ Make sure you initialize project first
 
 
 Compile your solidity contracts:
-`./node_modules/.bin/solcjs "file.sol" --abi --bin`
+`./node_modules/.bin/solcjs "AtomicLisp.sol" --abi --bin`
 
 This will create abi and binary files for your contracts. You can load them up in your script for later use.
 
