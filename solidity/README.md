@@ -11,7 +11,6 @@ Make sure you initialize project first
 
 `npm install solc testrpc web3`
 
-
 Compile your solidity contracts:
 `./node_modules/.bin/solcjs "AtomicLisp.sol" --abi --bin`
 
@@ -21,3 +20,10 @@ Start testrpc in another window
 `./node_modules/.bin/testrpc`
 
 Then you can run your script `node index.js`
+
+Or use the build script
+
+First set permissions: 
+`sudo chmod 755 build.sh`
+
+Then run the script `./build.sh`

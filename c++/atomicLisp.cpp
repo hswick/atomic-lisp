@@ -317,7 +317,7 @@ std::string fileToString(std::string filename) {
   	return content;
 }
 
-//Segmentation faults are from delimiter errors. Need to be better about checking
+//Segmentation faults from delimiter errors. Need to be better about checking
 int main()
 {
 	std::string program = fileToString("test5.al");

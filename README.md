@@ -13,3 +13,5 @@ Supports both floating point and integer arithmetic
 `-`
 `*`
 `/`
+
+strings.sol gives a lot of warnings right now

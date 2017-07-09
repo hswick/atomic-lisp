@@ -22,7 +22,8 @@ function executeContract() {
 				console.log("Contract mined");
 				console.log(contract.address);
 				program = AtomicLisp.at(contract.address);
-				console.log(program.run());
+				console.log(web3.toAscii(program.run()));
+				//console.log(program.run());
 			}
 		}
 	});

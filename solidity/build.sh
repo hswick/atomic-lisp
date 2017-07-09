@@ -1,2 +1,2 @@
-./node_modules/.bin/solcjs "AtomicLisp.sol" --abi --bin
+./node_modules/.bin/solcjs *.sol --abi --bin
 node index.js
